@@ -1,44 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-margin: 0;
-font-family: Arial, sans-serif;
-background: #0f2027;
-color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  line-height: 1.6;
 }
 
-/* Layout */
-.container {
-max-width: 800px;
-margin: auto;
-padding: 20px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 10%;
+  background: rgba(0, 0, 0, 0.35);
+  position: sticky;
+  top: 0;
 }
 
-/* Header */
-header {
-text-align: center;
-margin-bottom: 40px;
+nav h2 {
+  margin: 0;
+  color: #00d4ff;
 }
 
-h1 {
-font-size: 2.5em;
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
 }
 
-/* Cards */
+nav a:hover {
+  color: #00d4ff;
+}
+
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #dcdcdc;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  background: #00d4ff;
+  color: #0f2027;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: white;
+}
+
 .card {
-background: #1c1c1c;
-padding: 20px;
-margin-bottom: 20px;
-border-radius: 10px;
-transition: 0.3s;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 30px;
+  background: rgba(20, 20, 20, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Hover effect */
-.card:hover {
-transform: translateY(-5px);
-background: #2a2a2a;
+.card h2 {
+  color: #00d4ff;
+  margin-top: 0;
 }
 
-/* Section titles */
-h2 {
-border-bottom: 2px solid #00d4ff;
-padding-bottom: 5px;
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills span {
+  background: #102f3a;
+  border: 1px solid #00d4ff;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
+.experience,
+.project {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  border-left: 4px solid #00d4ff;
+}
+
+a {
+  color: #00d4ff;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 40px;
+}
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
 }
